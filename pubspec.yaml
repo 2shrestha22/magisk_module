@@ -46,6 +46,10 @@ dependencies:
       url: https://github.com/2shrestha22/properties.dart.git
       ref: 21eab9febdebcda04848db58ce4ec639eb68df3a
   flutter_markdown: ^0.6.14
+  go_router: ^6.0.6
+  animations: ^2.0.7
+  markdown: ^7.0.0
+  url_launcher: ^6.1.9
 
 dev_dependencies:
   flutter_test:

@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:github/github.dart';
 import 'package:magisk_module/models/module_prop.dart';
+import 'package:magisk_module/models/repo_info.dart';
 import 'package:properties/properties.dart';
 
 import 'api_service.dart';
@@ -27,7 +28,7 @@ class ModuleRepo {
     return repos;
   }
 
-  Future<ModuleProp?> getModuleProp(Repository repo) async {
+  Future<ModuleProp?> getModuleProp(RepoInfo repo) async {
     final response =
         await _api.getModuleProp(repo.fullName, repo.defaultBranch);
 
@@ -51,7 +52,7 @@ class ModuleRepo {
     }
   }
 
-  Future<String> getModuleReadMe(Repository repo) async {
+  Future<String> getModuleReadMe(RepoInfo repo) async {
     final response =
         await _api.getModuleReadMe(repo.fullName, repo.defaultBranch);
 

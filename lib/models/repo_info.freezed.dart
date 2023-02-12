@@ -16,9 +16,9 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$RepoInfo {
-  String? get name => throw _privateConstructorUsedError;
-  String? get fullName => throw _privateConstructorUsedError;
-  String? get defaultBranch => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get fullName => throw _privateConstructorUsedError;
+  String get defaultBranch => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $RepoInfoCopyWith<RepoInfo> get copyWith =>
@@ -30,7 +30,7 @@ abstract class $RepoInfoCopyWith<$Res> {
   factory $RepoInfoCopyWith(RepoInfo value, $Res Function(RepoInfo) then) =
       _$RepoInfoCopyWithImpl<$Res, RepoInfo>;
   @useResult
-  $Res call({String? name, String? fullName, String? defaultBranch});
+  $Res call({String name, String fullName, String defaultBranch});
 }
 
 /// @nodoc
@@ -46,23 +46,23 @@ class _$RepoInfoCopyWithImpl<$Res, $Val extends RepoInfo>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? fullName = freezed,
-    Object? defaultBranch = freezed,
+    Object? name = null,
+    Object? fullName = null,
+    Object? defaultBranch = null,
   }) {
     return _then(_value.copyWith(
-      name: freezed == name
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fullName: freezed == fullName
+              as String,
+      fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      defaultBranch: freezed == defaultBranch
+              as String,
+      defaultBranch: null == defaultBranch
           ? _value.defaultBranch
           : defaultBranch // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ) as $Val);
   }
 }
@@ -74,7 +74,7 @@ abstract class _$$_RepoInfoCopyWith<$Res> implements $RepoInfoCopyWith<$Res> {
       __$$_RepoInfoCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? name, String? fullName, String? defaultBranch});
+  $Res call({String name, String fullName, String defaultBranch});
 }
 
 /// @nodoc
@@ -88,41 +88,40 @@ class __$$_RepoInfoCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? fullName = freezed,
-    Object? defaultBranch = freezed,
+    Object? name = null,
+    Object? fullName = null,
+    Object? defaultBranch = null,
   }) {
     return _then(_$_RepoInfo(
-      name: freezed == name
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fullName: freezed == fullName
+              as String,
+      fullName: null == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      defaultBranch: freezed == defaultBranch
+              as String,
+      defaultBranch: null == defaultBranch
           ? _value.defaultBranch
           : defaultBranch // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_RepoInfo implements _RepoInfo {
+class _$_RepoInfo extends _RepoInfo {
   const _$_RepoInfo(
-      {required this.name,
-      required this.fullName,
-      required this.defaultBranch});
+      {required this.name, required this.fullName, required this.defaultBranch})
+      : super._();
 
   @override
-  final String? name;
+  final String name;
   @override
-  final String? fullName;
+  final String fullName;
   @override
-  final String? defaultBranch;
+  final String defaultBranch;
 
   @override
   String toString() {
@@ -151,18 +150,19 @@ class _$_RepoInfo implements _RepoInfo {
       __$$_RepoInfoCopyWithImpl<_$_RepoInfo>(this, _$identity);
 }
 
-abstract class _RepoInfo implements RepoInfo {
+abstract class _RepoInfo extends RepoInfo {
   const factory _RepoInfo(
-      {required final String? name,
-      required final String? fullName,
-      required final String? defaultBranch}) = _$_RepoInfo;
+      {required final String name,
+      required final String fullName,
+      required final String defaultBranch}) = _$_RepoInfo;
+  const _RepoInfo._() : super._();
 
   @override
-  String? get name;
+  String get name;
   @override
-  String? get fullName;
+  String get fullName;
   @override
-  String? get defaultBranch;
+  String get defaultBranch;
   @override
   @JsonKey(ignore: true)
   _$$_RepoInfoCopyWith<_$_RepoInfo> get copyWith =>
